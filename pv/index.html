@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+      
+<link rel="preload" href="https://scripts.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/player.js" as="script">
+<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
+<link rel="preload" href="https://images.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/thumbnail.jpg" as="image">
+<link rel="preload" href="https://cdn.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/644b1250ad718e00097915b4/playlist.m3u8" as="fetch">
+<link rel="dns-prefetch" href="https://cdn.converteai.net">
+<link rel="dns-prefetch" href="https://scripts.converteai.net">
+<link rel="dns-prefetch" href="https://images.converteai.net">
+<link rel="dns-prefetch" href="https://api.vturb.com.br">
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Los resultados pueden variar de persona a persona.">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/com.css">
+
+  <!-- Ícone da Página -->
+  <link rel="shortcut icon" type="image/jpg" href="/assets/img/favicon.png">
+
+  <!-- Título da Página -->
+  <title>Bem-estar e Saúde</title>
+
+  <style type="text/css">
+    header {
+      color: white;
+      background-image: rgb(8, 0, 45);
+      background-color: rgb(255, 255, 255);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-blend-mode: darken;
+    }
+
+body {
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      a {
+        color: #555;
+        text-decoration: none;
+      }
+
+      p {
+        line-height: 1.5;
+        font-size: 18px;
+      }
+
+      .big {
+        font-size: 22px;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .mt-3 {
+        margin-top: 2rem;
+      }
+
+      .fs-18px {
+        font-size: 18px;
+      }
+
+      .hl {
+        color: rgb(141, 41, 196);
+      }
+
+      .banner {
+        font-size: 2vw;
+        background-color: rgb(255, 0, 0);
+        font-family: sans-serif;
+        font-weight: bold;
+        color: #fff;
+      }
+
+      .disclaimer {
+        color: #999;
+      }
+
+      .crossed {
+        text-decoration: line-through;
+        color: rgb(255, 0, 0);
+      }
+
+      .pulse {
+        -webkit-animation: pulse 1.5s infinite;
+      }
+      @-webkit-keyframes pulse {
+        0% {
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+        70% {
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          box-shadow: 0 0 0 16px rgba(90, 153, 212, 0);
+        }
+        100% {
+          -moz-transform: scale(1);
+          -ms-transform: scale(1);
+          -webkit-transform: scale(1);
+          transform: scale(1);
+          box-shadow: 0 0 0 0 rgba(90, 153, 212, 0);
+        }
+      }
+
+      .btn {
+        background-color: rgb(141, 41, 196);
+        border-radius: 4px;
+        display: block;
+        color: #fff;
+        font-weight: 600;
+        font-size: 3vw;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 24px 28px;
+        text-decoration: none;
+        box-shadow: 1px 2px 8px #999;
+      }
+
+      .new-price {
+        color: rgb(0, 184, 0);
+        text-shadow: 0 2px 4px rgba(0, 222, 0, 0.5);
+        font-size: 32px;
+      }
+
+      @media (min-width: 600px) {
+        .py-lg-1 {
+          padding-bottom: 0.75rem;
+          padding-top: 0.75rem;
+        }
+
+        .px-lg-20 {
+          padding-left: 20%;
+          padding-right: 20%;
+        }
+
+        .btn {
+          max-width: 450px;
+          font-size: 1.25vw;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .banner {
+          font-size: 3.75vw;
+        }
+
+        .py-sm-1 {
+          padding-bottom: 0.75rem;
+          padding-top: 0.75rem;
+        }
+
+        .px-sm-2 {
+          padding-left: 1rem;
+          padding-right: 1rem;
+        }
+
+        .btn {
+          max-width: 75%;
+        }
+        .alt {
+          font-size: 4vw;
+        }
+
+        h1 {
+          font-size: 5vw;
+        }
+      }
+
+  </style>
+  
+  <script type="text/javascript">
+      var back_redirect_back_link = "/br" + location.search;
+      history.pushState({}, "", location.href);
+      history.pushState({}, "", location.href);
+
+      window.addEventListener(
+        "popstate",
+        function (event) {
+          if (event.state) {
+            setTimeout(function () {
+              location.href = back_redirect_back_link;
+            }, 1);
+          }
+        },
+        false
+      );
+    </script>
+
+<script language=javascript type="text/javascript">
+dayName = new Array ("domingo", "segunda-feira", "terça-feira", "quarta-feira", "quinta-feira", "sexta-feira", "sábado")
+monName = new Array ("janeiro", "fevereiro", "março", "abril", "maio", "junho", "agosto", "outubro", "novembro", "dezembro")
+now = new Date
+</script>
+  
+</head>
+
+<body>
+
+<div class="banner py-lg-1 py-sm-1 center white">
+VÍDEO CENSURADO EM MAIS DE 13 PAÍSES
+    </div>
+
+
+
+
+  <header class="py-4">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+
+          
+          <!-- VSL -->
+          <div id="vid_644b12762c5fbe000922b225" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_644b12762c5fbe000922b225" src="https://images.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_644b12762c5fbe000922b225" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_644b12762c5fbe000922b225">var s=document.createElement("script");s.src="https://scripts.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/player.js",s.async=!0,document.head.appendChild(s);</script>
+            
+<br><b>
+<div id="viewers">
+<span style="color:#ff0000"><span></span></span> <span style="color:#000000">pessoas estão assistindo a esse vídeo. Devido à alta demanda de acessos, garantimos a apresentação somente até <span style="color:#ff0000"><span id="descounttime"></span></span></b>
+
+<script>
+var getdayMonth = new Array("01", "02", "03", "04", "05", "06", "07","08", "09", "10", "11", "12");
+var getNow = new Date();
+var dayOfTheWeek = getNow.getDay();
+getNow.setTime(getNow.getTime() - 0 * 24 * 60 * 60 * 1000);
+document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + getdayMonth[(getNow.getMonth())] + "/" + getNow.getFullYear();
+</script>
+
+<script>
+  document.querySelectorAll("#viewers span")[0].innerHTML = getUsersView();
+
+  setInterval(() => {
+    updatesUsersView();
+  }, 2500);
+
+  function getUsersView() {
+    return Math.floor(Math.random() * (Math.floor(910) - Math.ceil(690))) + Math.ceil(690);
+  }
+
+  function updatesUsersView() {
+    var currentUsers = document.querySelectorAll("#viewers span")[0].innerHTML;
+    var users = Math.floor(Math.random() * (Math.floor(40) - Math.ceil(-40))) + Math.ceil(-40);
+    currentUsers = parseInt(currentUsers) < 690 ? parseInt(currentUsers) + users * user : parseInt(currentUsers) + users;
+    document.querySelectorAll("#viewers span")[0].innerHTML = currentUsers;
+  }
+</script>        
+
+        </header>
+
+  <section class="comments py-4">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address").html(response.city);
+      }, "jsonp");
+    </script>
+
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="fb-comments" style="margin-top: 5px;">
+            <div class="fb-comments-header">
+              <span>21 de 174 comentarios</span>
+            </div>
+            <div class="fb-comments-wrapper" id="2">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m2.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Tereza Mendonça</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Meninas, garanto que vale a pena assistir até o final. meus amigos aqui em <span id="address" style="color:#000000;">Salvador</span> estão impressionados com meu resultado e meu marido não para de me elogiar 😘</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>8</likes>
+
+                      <date>4 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="3">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m3.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Josefa Perez</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">A combinação dos ingredientes é a chave para um emagrecimento saudável e duradouro, reduzi 4 números</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>9</likes>
+
+                      <date>5 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="4">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m4.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Maria Carmen</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Não conseguia emagrecer mesmo me exercitando, mas com esse segredo, finalmente vi resultados</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>11</likes>
+
+                      <date>12 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="5">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/h2.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Carlos Castro</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Esse produto é muito prático de usar, não interfere na minha rotina diária</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>15</likes>
+
+                      <date>19 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="6">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m6.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Maria Rodriguez</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Finalmente encontrei um produto que me ajudou a superar minha frustração com a balança!</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>17</likes>
+
+                      <date>24 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="7">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m7.jpeg"></td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Roberta Gomes</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">Me surpreendi com a rapidez dos resultados, emagreci de forma consistente e saudável 🥰</td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>18</likes>
+
+                      <date>26 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="fb-comments-wrapper" id="9">
+              <table class="fb-comments-comment">
+                <tbody>
+                  <tr>
+                    <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m11.jpeg">
+                    </td>
+                    <td>
+                      <font class="fb-comments-comment-name">
+                        <name>Carmen González</name>
+                      </font>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-text">A praticidade desse produto é incrível, não precisei mudar minha rotina para emagrecer
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="fb-comments-comment-actions">
+                      <like>Curtir</like>
+                      ·
+                      <reply>Responder</reply>
+                      ·
+                      <likes>22</likes>
+
+                      <date>39 min</date>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <button class="fb-comments-loadmore" onclick="javascript:loadMore();">Ver mais
+              comentários</button>
+            <div style="display:none" id="more">
+              <div class="fb-comments-wrapper">
+                <table class="fb-comments-comment" id="10">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m12.jpeg">
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Lucía Fernandez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Esse segredinho mudou minha relação com a comida, agora sinto que tenho mais controle sobre minhas escolhas. 😍😍😍
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>41</likes>
+
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="11">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m15.jpeg">
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Isabel Alvarez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">A sensação de bem-estar que esse segredo proporciona é indescritível, sinto que meu corpo está mais saudável 🙏🙏🙏</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>40</likes>
+
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="12">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m16.jpeg">
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Sanchez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Esse produto é a solução perfeita para quem busca emagrecer sem sacrifícios ou sofrimentos. 🌹🥰🙋</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>47</likes>
+
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper" id="13">
+                <table class="fb-comments-comment">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m17.jpeg"></td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Marta Gomez</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Olá! Eu sou a Elizabeth, tenho 42 anos e quero compartilhar minha história com você. Há algum tempo, minha saúde estava em risco: minha pressão estava elevada, meus exames estavam péssimos e eu estava quase desenvolvendo diabetes. Foi então que descobri esse método incrível e decidi dar uma chance. Em apenas um mês e meio, consegui perder 6 kg e minha pressão voltou ao normal. Além disso, minha autoestima tem melhorado a cada dia. Estou muito grata por ter encontrado essa solução e queria compartilhar minha experiência com você.</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>50</likes>
+
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="fb-comments-wrapper">
+                <table class="fb-comments-comment" id="14">
+                  <tbody>
+                    <tr>
+                      <td rowspan="3" class="fb-comments-comment-img"><img src="./assets/img/comentarios/m18.jpeg">
+                      </td>
+                      <td>
+                        <font class="fb-comments-comment-name">
+                          <name>Maria Angeles</name>
+                        </font>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-text">Eu já estou começando a notar minhas roupas ficando mais largas também. Obrigado por compartilhar sua experiência comigo!</td>
+                    </tr>
+                    <tr>
+                      <td class="fb-comments-comment-actions">
+                        <like>Curtir</like>
+                        ·
+                        <reply>Responder</reply>
+                        ·
+                        <likes>66</likes>
+
+                        <date>1 h</date>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+  
+<div id="cta1" class="mt-4 d-none">
+<a href="https://pay.hotmart.com/W75115719G" class="a-btn" style="text-decoration: none;">
+<span class="span-btn">¡SÍ! >></span>
+<span class="span-btn2">(Plazas limitadas)</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+  <footer class="bg-white py-3 text-center">
+
+    <h6><span style="color:#6C757D">Copyright 2023 – Bem-estar e Saúde ®
+        <br>Todos os direitos reservados</span><br><br>
+
+      <div class="text-secondary"><a href="terminos.html" class="text-secondary">Termos de Uso</a> – <a href="privacidad.html"
+          class="text-secondary">Políticas de Privacidade</a> – <a href="reembolso.html" class="text-secondary">Políticas de
+          Reembolso</a> – <a href="aviso.html"
+          class="text-secondary">Aviso Legal</a></div><br>
+
+<h6><span style="color:#6C757D">CNPJ: 12.345.678/0001-23, Bem-estar e Saúde, R. da Alfândega, 100 - F4 - Centro, Rio de Janeiro - RJ, 20070-004, (21) 98877-8899</span></h6> 
+
+
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="./assets/js/com.js"></script>
+
+</body>
+</html>
