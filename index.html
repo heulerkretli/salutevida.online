@@ -90,15 +90,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>$.get("https://ipinfo.io/json", function (response) {
-        $("#address1").html(response.city);
+        $("#address").html(response.city);
       }, "jsonp");
     </script>
-
-        <script>$.get("https://ipinfo.io/json", function (response) {
-        $("#address2").html(response.city);
-      }, "jsonp");
-    </script>
-
+      
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8">
