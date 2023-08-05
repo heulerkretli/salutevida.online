@@ -145,11 +145,41 @@ Os resultados esperam por você...<br><br></h5>
                 <br>
                 
     </header>
-    <footer class="bg-dark py-3 text-center">
-        <div class="text-white"><a href="termos.html" class="text-white">Termos de Uso</a> -
-            <a href="privacidade.html" class="text-white">Privacidade</a>
-        </div>
-    </footer>
+    <footer class="bg-white py-3 text-center">
+
+    <h6><span style="color:#6C757D">Copyright 2023 – Bem-estar e Saúde ®
+        <br>Todos os direitos reservados</span><br><br>
+
+      <div class="text-secondary"><a href="terminos.html" class="text-secondary">Termos de Uso</a> – <a href="privacidad.html"
+          class="text-secondary">Políticas de Privacidade</a> – <a href="reembolso.html" class="text-secondary">Políticas de
+          Reembolso</a> – <a href="aviso.html"
+          class="text-secondary">Aviso Legal</a></div><br>
+
+<h6><span style="color:#6C757D">CNPJ: 12.345.678/0001-23, Bem-estar e Saúde, R. da Alfândega, 100 - F4 - Centro, Rio de Janeiro - RJ, 20070-004, (21) 98877-8899</span></h6> 
+
+<script>
+    let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com", "https://go.hotmart.com"];
+
+function getParams() {
+    let t = "",
+        e = window.top.location.href,
+        r = new URL(e);
+    if (null != r) {
+        let a = r.searchParams.get("utm_source"),
+            n = r.searchParams.get("utm_medium"),
+            o = r.searchParams.get("utm_campaign"),
+            m = r.searchParams.get("utm_term"),
+            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
+    }
+    return t
+}! function() {
+    var t = new URLSearchParams(window.location.search);
+    t.toString() && document.querySelectorAll("a").forEach(function(e) {
+        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
+    })
+}();
+</script>          
+  </footer>
 
     <script type="text/javascript">
         setTimeout(() => { document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none") }, 199800); // temporização da Call to Action (em milissegundos)
