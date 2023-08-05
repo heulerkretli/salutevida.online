@@ -263,14 +263,29 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
   }
 </script>        
 
-        </header>
+         <!-- Botão 1 -->
+            <div id="cta1" class="mt-4 d-none">
+              <a href="https://pay.hotmart.com/T73931124I?checkoutMode=10" class="a-btn" style="text-decoration: none;">
+                <span class="span-btn">¡QUIERO ACCESO!</span>
+                <span class="span-btn2">(atención: plazas limitadas)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
   <section class="comments py-4">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>$.get("https://ipinfo.io/json", function (response) {
-        $("#address").html(response.city);
+        $("#address1").html(response.city);
+      }, "jsonp");
+    </script>
+
+        <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address2").html(response.city);
       }, "jsonp");
     </script>
 
@@ -630,16 +645,17 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
             </div>
           </div>
   
-<div id="cta1" class="mt-4 d-none">
-<a href="https://pay.hotmart.com/W75115719G" class="a-btn" style="text-decoration: none;">
-<span class="span-btn">¡SÍ! >></span>
-<span class="span-btn2">(Plazas limitadas)</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
+<!-- Botão 2 -->
+            <div id="cta2" class="mt-4 d-none">
+              <a href="https://pay.hotmart.com/T73931124I?checkoutMode=10" class="a-btn" style="text-decoration: none;">
+                <span class="span-btn">¡QUIERO ACCESO!</span>
+                <span class="span-btn2">(atención: plazas limitadas)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   <footer class="bg-white py-3 text-center">
 
@@ -655,6 +671,10 @@ document.getElementById("descounttime").innerHTML =  getNow.getDate() + "/" + ge
 
 
   </footer>
+
+      <script type="text/javascript">
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 16); // temporização da Call to Action (em milissegundos)
+    </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
