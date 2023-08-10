@@ -1308,6 +1308,24 @@
                             padding-left: 8px
                         }
                     </style>
+
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address1").html(response.city);
+      }, "jsonp");
+    </script>
+
+                    <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address2").html(response.city);
+      }, "jsonp");
+    </script>
+
+                    <script>$.get("https://ipinfo.io/json", function (response) {
+        $("#address3").html(response.city);
+      }, "jsonp");
+    </script>
+                    
                     <div class="fbComments-pKqQQE0508777-element">
                         <p class="text-xs sm:text-sm leading-4 font-semibold mb-2">
                             Mostrando <span id="total_comentarios">10</span> de 296 comentarios
@@ -1390,7 +1408,7 @@
                                             <p
                                                 class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
                                                 Milena Fernandes </p>
-                                            <p class="text-sm leading-4 pt-0.5"> Alguém aqui de CIDADE já testou e pode me dizer se funciona??? Minha barriga está demais!!! </p>
+                                            <p class="text-sm leading-4 pt-0.5"> Alguém aqui de <span id="address1" style="color:#000000;">Salvador</span> já testou e pode me dizer se funciona??? Minha barriga está demais!!! </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1424,7 +1442,7 @@
                                             <p
                                                 class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
                                                 Marcia Feitosa </p>
-                                            <p class="text-sm leading-4 pt-0.5"> Olá, eu sou aqui de CIDADE, também estava desconfiada mas realmente funciona, minha barriga sumiu... </p>
+                                            <p class="text-sm leading-4 pt-0.5"> Olá, eu sou aqui de <span id="address2" style="color:#000000;">Salvador</span>, também estava desconfiada mas realmente funciona, minha barriga sumiu... </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1458,7 +1476,7 @@
                                             <p
                                                 class="font-semibold text-[#365899] text-[13px] leading-4 cursor-pointer hover:underline">
                                                 Marcelle Andrade </p>
-                                            <p class="text-sm leading-4 pt-0.5"> Eu também moro aqui em CIDADE e perdi 8 quilos logo na primeira semana, estou chocada! </p>
+                                            <p class="text-sm leading-4 pt-0.5"> Eu também moro aqui em <span id="address3" style="color:#000000;">Salvador</span> e perdi 8 quilos logo na primeira semana, estou chocada! </p>
                                         </div>
                                     </div>
                                 </div>
