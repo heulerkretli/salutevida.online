@@ -4,7 +4,7 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
-@app.route('/api/extract-slugs', methods=['GET'])
+@app.route('/extract-slugs', methods=['GET'])
 def extract_slugs():
     url = request.args.get('url')
     
