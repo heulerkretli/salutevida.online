@@ -6,7 +6,7 @@ document.getElementById('domain-form').addEventListener('submit', function (e) {
 
     const domain = domainInput.value;
     
-    fetch(`/api/extract-slugs?url=${encodeURIComponent(domain)}`)
+    fetch(`/extract-slugs?url=${encodeURIComponent(domain)}`)
         .then(response => response.json())
         .then(data => {
             slugList.innerHTML = '';
