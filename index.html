@@ -142,6 +142,8 @@
 
 <body>
 
+      <typebot-standard style="width: 100%; height: 600px; "></typebot-standard>
+
   <header class="py-4">
     <div class="container">
       <div class="row justify-content-center">
@@ -577,6 +579,19 @@ function getParams() {
 </script>
           
   </footer>
+
+      <script>
+      const typebotInitScript = document.createElement("script");
+typebotInitScript.type = "module";
+typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.25/dist/web.js'
+  
+Typebot.initStandard({
+  typebot: "cocumber2",
+  apiHost: "https://viewer-production-18c7.up.railway.app",
+});
+`;
+document.body.append(typebotInitScript);
+      </script>
 
       <script type="text/javascript">
       setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 16); // temporização da Call to Action (em milissegundos)
