@@ -2,92 +2,8 @@
 <html lang="pt-BR" dir="ltr">
 
 <head>
-
-      <script>
-  // Função para capturar as UTM parameters da URL atual
-  function getUTMParameters() {
-      var params = {};
-      var query = window.location.search.substring(1);
-      var vars = query.split('&');
-      for (var i = 0; i < vars.length; i++) {
-          var pair = vars[i].split('=');
-          if (pair[0].startsWith('utm_')) {
-              params[pair[0]] = decodeURIComponent(pair[1]);
-          }
-      }
-      return params;
-  }
-
-  // Função para anexar as UTM parameters a uma URL
-  function appendUTMParametersToUrl(url, utmParams) {
-      var urlObject = new URL(url);
-      for (var key in utmParams) {
-          urlObject.searchParams.set(key, utmParams[key]);
-      }
-      return urlObject.toString();
-  }
-
-  // Função de manipulação do evento de clique
-  function eventoEngajamento(event) {
-      console.log("Evento de Engajamento Inicializado...");
-
-      event.preventDefault();
-
-      var utmParams = getUTMParameters();
-      var urlDestino = appendUTMParametersToUrl(event.currentTarget.href, utmParams);
-
-      console.log("URL de Destino com UTM:", urlDestino);
-
-      // Configuração do evento de engajamento do ClickMagic
-      window.clickmagick_cmc = {
-          uid: '189853',
-          hid: '3636672827',
-          cmc_goal: 'e',
-          vid_info: 'on',
-          cmc_ref: 'sp-ic-click'
-      };
-
-      // Carrega o script de rastreamento do ClickMagic
-      var script = document.createElement('script');
-      script.src = "//cdn.clkmc.com/cmc.js";
-      document.head.appendChild(script);
-
-      setTimeout(function() {
-          window.location.href = urlDestino;
-      }, 3000);
-  }
-
-  // Configuração para os botões carregados pelo SmartPlayer
-  window.onload = function () {
-      smartplayer.instances[0].on("loadeddata", () => {
-          const buttonLinks = document.querySelectorAll('.smartplayer-call-action--link');
-          const queryString = window.location.search;
-
-          buttonLinks.forEach((buttonLink) => {
-              // Atualiza o href com os parâmetros da query string
-              if (buttonLink.href.indexOf("?") === -1) {
-                  buttonLink.href += queryString;
-              } else {
-                  buttonLink.href += queryString.replace('?', '&');
-              }
-
-              // Adiciona o evento de engajamento
-              buttonLink.addEventListener("click", eventoEngajamento);
-          });
-      });
-  }
-</script>
-      
-<link rel="preload" href="https://scripts.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/player.js" as="script">
-<link rel="preload" href="https://cdn.converteai.net/lib/js/smartplayer/v1/smartplayer.min.js" as="script">
-<link rel="preload" href="https://images.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/players/644b12762c5fbe000922b225/thumbnail.jpg" as="image">
-<link rel="preload" href="https://cdn.converteai.net/34764d5b-908e-430a-a185-29653d390cf7/644b1250ad718e00097915b4/playlist.m3u8" as="fetch">
-<link rel="dns-prefetch" href="https://cdn.converteai.net">
-<link rel="dns-prefetch" href="https://scripts.converteai.net">
-<link rel="dns-prefetch" href="https://images.converteai.net">
-<link rel="dns-prefetch" href="https://api.vturb.com.br">
-
-    <meta property="og:type" content="website">
+   
+      <meta property="og:type" content="website">
     <meta property="og:url" content="https://domínio.com">
     <meta property="og:title" content="Conteúdo Exclusivo">
     <meta property="og:description" content="Conteúdo Exclusivo">
@@ -152,11 +68,11 @@
           <!-- VSL -->
           <div id="vid_650b250417c7360009d1844d" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_650b250417c7360009d1844d" src="https://images.converteai.net/33f39431-0f17-4a0e-a12a-0a7a21d54329/players/650b250417c7360009d1844d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_650b250417c7360009d1844d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_650b250417c7360009d1844d">var s=document.createElement("script");s.src="https://scripts.converteai.net/33f39431-0f17-4a0e-a12a-0a7a21d54329/players/650b250417c7360009d1844d/player.js",s.async=!0,document.head.appendChild(s);</script>
               
-          <link rel="prerender" href="https://pay.hotmart.com/T73931124I?checkoutMode=10"/>
+          <link rel="prerender" href="https://pay.hotmart.com/123456789?checkoutMode=10"/>
 
           <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.hotmart.com/T73931124I?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
+              <a href="https://pay.hotmart.com/123456789?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
               <br>
               <span class="span-btn">COMPRAR AGORA!</span>   
               <br>
@@ -532,7 +448,7 @@
   
 <!-- Botão 2 -->
             <div id="cta2" class="mt-4 d-none">
-              <a href="https://pay.hotmart.com/T73931124I?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
+              <a href="https://pay.hotmart.com/123456789?checkoutMode=10" class="btn btn-success btn-lg btn-block" style="text-decoration: none;">
               <br>
               <span class="span-btn">COMPRAR AGORA!</span>
               <br>
@@ -549,11 +465,7 @@
         <br>Todos os direitos reservados</span><br><br>
 
       <div class="text-secondary"><a href="termos.html" class="text-secondary">Termos de Uso</a> – <a href="privacidade.html"
-          class="text-secondary">Políticas de Privacidade</a> – <a href="reembolso.html" class="text-secondary">Políticas de
-          Reembolso</a> – <a href="aviso.html"
-          class="text-secondary">Aviso Legal</a></div><br>
-
-<h6><span style="color:#6C757D">CNPJ: 12.345.678/0001-23, Bem-estar e Saúde, R. da Alfândega, 100 - F4 - Centro, Rio de Janeiro - RJ, 20070-004, (21) 98877-8899</span></h6> 
+          class="text-secondary">Políticas de Privacidade</a></div><br>
 
 <script>
     let prefix = ["https://payment.hotmart.com", "https://pay.hotmart.com", "https://go.hotmart.com"];
@@ -580,21 +492,9 @@ function getParams() {
           
   </footer>
 
-      <script>
-      const typebotInitScript = document.createElement("script");
-typebotInitScript.type = "module";
-typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.2.25/dist/web.js'
-  
-Typebot.initStandard({
-  typebot: "cocumber2",
-  apiHost: "https://viewer-production-18c7.up.railway.app",
-});
-`;
-document.body.append(typebotInitScript);
-      </script>
 
       <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 16); // temporização da Call to Action (em milissegundos)
+      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none"); document.getElementById("cta2").classList.remove("d-none")}, 1600); // temporização da Call to Action (em milissegundos)
     </script>
 
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
